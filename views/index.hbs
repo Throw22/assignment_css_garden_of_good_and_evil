@@ -91,15 +91,108 @@
   <div class="col-xs-6 left">
 
   </div>
+
   <div class="col-xs-6 right">
     <ul class="like-list">
+      <li>
+        <h6>Likes</h6>
+        <h3>{{favoriteFood}}</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+      </li>
+      <li>
+        <h6>Likes</h6>
+        <h3>{{favoriteColor}}</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+      </li>
+      {{#if isGood}}
       <li>
         <h6>Likes</6>
         <h3>Walking grandmothers across the street</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.</p>
       </li>
+      <li>
+        <h6>Likes</6>
+        <h3>Random acts of kindness</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+      </li>
+      <li>
+        <h6>Likes</6>
+        <h3>Long walks on the beach</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+      </li>
+      {{else}}
+      <li>
+        <h6>Likes</6>
+        <h3>Pushing grandfathers into the street</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+      </li>
+      <li>
+        <h6>Likes</6>
+        <h3>Random acts of malice</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+      </li>
+      <li>
+        <h6>Likes</6>
+        <h3>Global Warming</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+      </li>
+        {{/if}}
     </ul>
+
+
+
+    <ul class="dislike-list">
+      {{#if isGood}}
+      <li>
+        <h6>Dislikes</6>
+        <h3>Pranks and/or idleness</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+      </li>
+      <li>
+        <h6>Dislikes</6>
+        <h3>Extremely spicy food</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+      </li>
+      <li>
+        <h6>Dislikes</6>
+        <h3>Loud music after 11PM</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+      </li>
+      {{else}}
+      <li>
+        <h6>Dislikes</6>
+        <h3>Nonalcoholic beverages</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+      </li>
+      <li>
+        <h6>Dislikes</6>
+        <h3>Sending thank-you notes</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+      </li>
+      <li>
+        <h6>Dislikes</6>
+        <h3>Babies</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+      </li>
+        {{/if}}
+    </ul>
+
+
+
   </div>
 </div>
 
@@ -108,7 +201,7 @@
     <div class="{{favoriteColor}}">
     <br>
 
-    <div class="likes-and-dislikes">
+    <!-- <div class="likes-and-dislikes">
       <h4>Likes</h4>
       <div>
         <ul>
@@ -140,9 +233,9 @@
             </li>
           {{/if}}
         </ul>
-      </div>
+      </div> -->
 
-      <br>
+      <!-- <br>
 
       <h4>Dislikes</h4>
       <div>
@@ -172,7 +265,7 @@
       </div>
     </div>
 
-    <br>
+    <br> -->
 
     <div class="biography">
       <h4>Biography:</h4>
