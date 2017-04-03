@@ -18,9 +18,40 @@
           Evil
         </label>
       </div>
+      <div>
+        <label for="favoriteFood">Favorite Food</label>
+        <input type="text" class="form-control" name="favoriteFood" placeholder="Favorite Food">
+      </div>
+      <div class="form-group">
+        <label for="favoriteColor">Favorite color:</label>
+        <select class="form-control" name="favoriteColor">
+          <option>Red</option>
+          <option>Blue</option>
+          <option>Yellow</option>
+          <option>Green</option>
+        </select>
+      </div>
+      <div>
+        <label for="insanityLevel">Insanity Level: (currently at {{insanityLevel}})</label>
+        <input type="range" name="insanityLevel" min="0" max="666">
+      </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+
+    <div>
+      <ul> Likes
+        <li>
+          {{favoriteFood}}
+        </li>
+        <li>
+          {{favoriteColor}}
+        </li>
+      </ul>
+      <ul> Dislikes
+        <li>
+          Blah
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
-
-
+  </div>
