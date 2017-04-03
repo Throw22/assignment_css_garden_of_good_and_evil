@@ -87,9 +87,13 @@
   </div>
 </div>
 
-<div class="row">
+<div class="row" style="display: flex;">
   <div class="col-xs-6 left">
-
+    {{#if isGood}}
+    <div id="good-bg"></div>
+    {{else}}
+    <div id="bad-bg"></div>
+    {{/if}}
   </div>
 
   <div class="col-xs-6 right">
