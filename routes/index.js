@@ -8,12 +8,15 @@ router.get('/', function(req, res, next) {
   var favoriteColor = req.cookies.favoriteColor;
   var insanityLevel = parseInt(req.cookies.insanityLevel);
 
+  if (!insanityLevel) insanityLevel = '0';
+
   res.render('index', {
     title: 'Express',
     goodOrEvil: goodOrEvil,
     favoriteFood: favoriteFood,
     favoriteColor: favoriteColor,
-    insanityLevel: insanityLevel
+    insanityLevel: insanityLevel,
+    isGood: goodOrEvil === 'good',
   });
 });
 
@@ -26,7 +29,7 @@ router.post('/update', function(req, res, next) {
   if (!goodOrEvil) goodOrEvil = 'good';
   if (!favoriteFood) favoriteFood = 'Something delicious';
   if (!favoriteColor) favoriteColor = 'Red';
-  if (!insanityLevel) insanityLevel = 0;
+  if (!insanityLevel) insanityLevel = '0';
 
   res.cookie('goodOrEvil', goodOrEvil);
   res.cookie('favoriteFood', favoriteFood);
@@ -37,14 +40,3 @@ router.post('/update', function(req, res, next) {
 
 module.exports = router;
 
-// app.get("/", (req, res) => {
-// const favorites = req.cookies.favorites;
-// res.render("home", { favorites });
-// });
-
-// app.post("/favorite/:id", (req, res) => {
-//   const id = req.params.id;
-//   const favorites = req.cookies.favorites || [];
-//   res.cookie("favorites", favorites.push(id));
-//   res.redirect("/");
-// });

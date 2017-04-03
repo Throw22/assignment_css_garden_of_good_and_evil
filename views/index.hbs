@@ -33,7 +33,8 @@
       </div>
       <div>
         <label for="insanityLevel">Insanity Level: (currently at {{insanityLevel}})</label>
-        <input type="range" name="insanityLevel" min="0" max="666">
+        <input type="range" name="insanityLevel" id="insanitySlider" min="0" max="666" value="{{insanityLevel}}">
+        <p>Current value: <span id="insanityLabel">xxxx</span></p>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
@@ -46,12 +47,53 @@
         <li>
           {{favoriteColor}}
         </li>
+        {{#if isGood}}
+          <li>
+            Walking grandmothers across the street
+          </li>
+          <li>
+            Random acts of kindness
+          </li>
+          <li>
+            Long walks on the beach
+          </li>
+        {{else}}
+          <li>
+            Pushing grandfathers into the street
+          </li>
+          <li>
+            Random acts of evil
+          </li>
+          <li>
+            Global warming
+          </li>
+        {{/if}}
       </ul>
       <ul> Dislikes
-        <li>
-          Blah
-        </li>
+        {{#if isGood}}
+          <li>
+            Pranks / idleness
+          </li>
+          <li>
+            Extremely spicy food
+          </li>
+          <li>
+            Loud music after 11pm
+          </li>
+        {{else}}
+          <li>
+            Nonalcoholic beverages
+          </li>
+          <li>
+            Sending thank you notes
+          </li>
+          <li>
+            Babies
+          </li>
+        {{/if}}
       </ul>
     </div>
   </div>
-  </div>
+</div>
+
+
