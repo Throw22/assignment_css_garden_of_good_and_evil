@@ -37,3 +37,10 @@
 .yellow{
   background: #D4CB6A;
 }
+
+.form{
+  background: white;
+  border: 3px solid darkgrey;
+  border-radius: 15px;
+  padding:7px;
+}
