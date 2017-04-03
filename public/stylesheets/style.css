@@ -1,12 +1,13 @@
+body {
+  background: #F4F4F4;
+}
 
 .good {
   color: #000;
-  background: #73A580;
 }
 
 .evil {
   color: #fff;
-  background: #511C29;
 }
 
 .little-insane {
@@ -39,8 +40,36 @@
 }
 
 .form{
-  background: white;
-  border: 3px solid darkgrey;
-  border-radius: 15px;
   padding:7px;
+  box-shadow: 0 0 10px #888888;
+  margin-bottom: 30px;
+  border-radius:10px;
+}
+
+
+.submit{
+  background: #89BDEE;
+  border-radius: 0;
+  color: #fff;
+}
+
+.submit:hover{
+  background: #FACC83;
+  color: #fff;
+}
+
+.like-list {
+  background: #fff;
+}
+.like-list h6{
+  color: #FACD86;
+  font-weight: bold;
+}
+
+.like-list h3{
+  margin: 0;
+}
+
+.like-list li{
+  list-style-type: none;
 }

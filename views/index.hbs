@@ -8,89 +8,104 @@
 <div class="row">
   <div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
     <form action="/update" method="post" class="form">
-      <div class="form-check">
+      <div class="form-check row text-center">
         {{#if isGood}}
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" checked="checked" name="goodOrEvil" value="good">
-          Good
-        </label>
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="goodOrEvil" value="evil">
-          Evil
-        </label>
+        <div class="col-xs-3 col-xs-offset-3">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" checked="checked" name="goodOrEvil" value="good">
+            Good
+          </label>
+        </div>
+        <div class="col-xs-3 col-xs-offset-right-3">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="goodOrEvil" value="evil">
+            Evil
+          </label>
+        </div>
         {{else}}
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input"  name="goodOrEvil" value="good">
-          Good
-        </label>
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" checked="checked" name="goodOrEvil" value="evil">
-          Evil
-        </label>
+        <div class="col-xs-3 col-xs-offset-3">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input"  name="goodOrEvil" value="good">
+            Good
+          </label>
+        </div>
+        <div class="col-xs-3 col-xs-offset-right-3">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" checked="checked" name="goodOrEvil" value="evil">
+            Evil
+          </label>
+        </div>
         {{/if}}
       </div>
-
-          <div class="form-group row">
-            <label for="favoriteFood" class="col-xs-4 col-form-label">Favorite Food</label>
-            <div class="col-xs-8">
-              <input type="text" class="form-control" name="favoriteFood" value="{{favoriteFood}}" placeholder="Favorite Food">
-            </div>
-          </div>
-
-        <div class="form-group row">
-          <label for="favoriteColor" class="col-xs-4 col-form-label">Favorite color:</label>
-          <div class="col-xs-8">
-            <select class="form-control " default=" " name="favoriteColor">
-              <option value="" disabled selected>Select your color</option>
-              {{#if isRed}}
-                <option selected='selected' value="red">Red</option>
-              {{else}}
-                <option value="red">Red</option>
-              {{/if}}
-
-              {{#if isBlue}}
-                <option selected='selected' value="blue">Blue</option>
-              {{else}}
-                <option value="blue">Blue</option>
-              {{/if}}
-
-              {{#if isYellow}}
-                <option selected='selected' value="yellow">Yellow</option>
-
-              {{else}}
-                <option value="yellow">Yellow</option>
-              {{/if}}
-
-              {{#if isGreen}}
-                <option selected='selected' value="green">Green</option>
-              {{else}}
-                <option value="green">Green</option>
-              {{/if}}
-            </select>
-          </div>
+      <div class="form-group row">
+        <label for="favoriteFood" class="col-xs-4 col-form-label">Favorite Food</label>
+        <div class="col-xs-8">
+          <input type="text" class="form-control" name="favoriteFood" value="{{favoriteFood}}" placeholder="Favorite Food">
         </div>
-
-        <br>
-
-        <div>
-          <label for="insanityLevel">Insanity Level: (currently at {{insanityLevel}})</label>
+      </div>
+      <div class="form-group row">
+        <label for="favoriteColor" class="col-xs-4 col-form-label">Favorite color:</label>
+        <div class="col-xs-8">
+          <select class="form-control " default=" " name="favoriteColor">
+            <option value="" disabled selected>Select your color</option>
+            {{#if isRed}}
+              <option selected='selected' value="red">Red</option>
+            {{else}}
+              <option value="red">Red</option>
+            {{/if}}
+            {{#if isBlue}}
+              <option selected='selected' value="blue">Blue</option>
+            {{else}}
+              <option value="blue">Blue</option>
+            {{/if}}
+            {{#if isYellow}}
+              <option selected='selected' value="yellow">Yellow</option>
+            {{else}}
+              <option value="yellow">Yellow</option>
+            {{/if}}
+            {{#if isGreen}}
+              <option selected='selected' value="green">Green</option>
+            {{else}}
+              <option value="green">Green</option>
+            {{/if}}
+          </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="insanityLevel" class="col-xs-4 col-form-label">Insanity Level: {{insanityLevel}}</label>
+        <div class="col-xs-8">
           <input type="range" name="insanityLevel" id="insanitySlider" min="0" max="666" value="{{insanityLevel}}">
-          <p>Current value: <span id="insanityLabel">xxxx</span></p>
+          <p class="text-center"><span id="insanityLabel"></span></p>
         </div>
-
-        <br>
-
-        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+      <div class="form-group row">
+        <div class="col-xs-12">
+          <button type="submit" class="btn btn-block submit">Submit</button>
+        </div>
+      </div>
       </form>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-6 left">
+
+  </div>
+  <div class="col-xs-6 right">
+    <ul class="like-list">
+      <li>
+        <h6>Likes</6>
+        <h3>Walking grandmothers across the street</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+      </li>
+    </ul>
   </div>
 </div>
 
 <div class="row">
   <div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
     <div class="{{favoriteColor}}">
-
-
-
     <br>
 
     <div class="likes-and-dislikes">
