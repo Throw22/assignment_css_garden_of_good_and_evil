@@ -87,13 +87,12 @@
   </div>
 </div>
 
-<div class="row" style="display: flex;">
-  <div class="col-xs-6 left">
-    {{#if isGood}}
-    <div id="good-bg"></div>
-    {{else}}
-    <div id="bad-bg"></div>
-    {{/if}}
+<div class="row" style="display:table;">
+  {{#if isGood}}
+  <div class="col-xs-6 left good">
+  {{else}}
+  <div class="col-xs-6 left evil">
+  {{/if}}
   </div>
 
   <div class="col-xs-6 right">
@@ -106,7 +105,7 @@
       </li>
       <li>
         <h6>Likes</h6>
-        <h3>{{favoriteColor}}</h3>
+        <h3>The color {{favoriteColor}}</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.</p>
       </li>
@@ -151,8 +150,6 @@
         {{/if}}
     </ul>
 
-
-
     <ul class="dislike-list">
       {{#if isGood}}
       <li>
@@ -194,85 +191,14 @@
       </li>
         {{/if}}
     </ul>
-
-
-
   </div>
 </div>
 
 <div class="row">
-  <div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-    <div class="{{favoriteColor}}">
-    <br>
-
-    <!-- <div class="likes-and-dislikes">
-      <h4>Likes</h4>
-      <div>
-        <ul>
-          <li>
-            {{favoriteFood}}
-          </li>
-          <li>
-            {{favoriteColor}}
-          </li>
-          {{#if isGood}}
-            <li>
-              Walking grandmothers across the street
-            </li>
-            <li>
-              Random acts of kindness
-            </li>
-            <li>
-              Long walks on the beach
-            </li>
-          {{else}}
-            <li>
-              Pushing grandfathers into the street
-            </li>
-            <li>
-              Random acts of evil
-            </li>
-            <li>
-              Global warming
-            </li>
-          {{/if}}
-        </ul>
-      </div> -->
-
-      <!-- <br>
-
-      <h4>Dislikes</h4>
-      <div>
-        <ul>
-          {{#if isGood}}
-            <li>
-              Pranks / idleness
-            </li>
-            <li>
-              Extremely spicy food
-            </li>
-            <li>
-              Loud music after 11pm
-            </li>
-          {{else}}
-            <li>
-              Nonalcoholic beverages
-            </li>
-            <li>
-              Sending thank you notes
-            </li>
-            <li>
-              Babies
-            </li>
-          {{/if}}
-        </ul>
-      </div>
-    </div>
-
-    <br> -->
-
+  <div class="col-xs-12">
+    <div class="">
     <div class="biography">
-      <h4>Biography:</h4>
+      <h2>Biography:</h2>
       {{#if isGood}}
         <p>As a good person you were probably born and raised in South Detroit, and took the midnight train going anywhere.</p>
       {{else}}
@@ -283,11 +209,11 @@
     <br>
 
     <div class="resume">
-      <h4>Current Position: <span>{{#if isGood}} Farmer {{else}} Hedge Fund Investor {{/if}}</span></h4>
+      <h2>Current Position: <span>{{#if isGood}} Farmer {{else}} Hedge Fund Investor {{/if}}</span></h2>
 
       <br>
 
-      <h4>Previous Positions:</h4>
+      <h2>Previous Positions:</h2>
       <ul>
         {{#if isGood}}
         <li>
