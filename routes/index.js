@@ -9,12 +9,19 @@ router.get('/', function(req, res, next) {
   var insanityLevel = parseInt(req.cookies.insanityLevel);
 
   if (!insanityLevel) insanityLevel = '0';
-
+  console.log(favoriteColor === 'red');
+  console.log(favoriteColor === 'yellow');
+  console.log(favoriteColor === 'green');
+  console.log(favoriteColor === 'blue');
   res.render('index', {
     title: 'Express',
     goodOrEvil: goodOrEvil,
     favoriteFood: favoriteFood,
     favoriteColor: favoriteColor,
+    isRed: favoriteColor === 'red',
+    isGreen: favoriteColor === 'green',
+    isYellow: favoriteColor === 'yellow',
+    isBlue: favoriteColor ==='blue',
     insanityLevel: insanityLevel,
     isGood: goodOrEvil === 'good',
     isALittleInsane: insanityLevel <= 223,

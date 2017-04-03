@@ -4,52 +4,89 @@
     <p>Choose your destiny, if you dare</p>
   </div>
 </div>
-<br>
 <div class="row">
   <div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
     <form action="/update" method="post">
       <div class="form-check">
+        {{#if isGood}}
         <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="goodOrEvil" value="good">
+          <input type="radio" class="form-check-input" checked="checked" name="goodOrEvil" value="good">
           Good
         </label>
         <label class="form-check-label">
           <input type="radio" class="form-check-input" name="goodOrEvil" value="evil">
           Evil
         </label>
+        {{else}}
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input"  name="goodOrEvil" value="good">
+          Good
+        </label>
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" checked="checked" name="goodOrEvil" value="evil">
+          Evil
+        </label>
+        {{/if}}
       </div>
 
-      <br>
+        {{!-- <div>
+          <label for="favoriteFood">Favorite Food</label>
+          <input type="text" class="form-control" name="favoriteFood" value="{{favoriteFood}}" placeholder="Favorite Food">
+        </div>
 
-      <div>
-        <label for="favoriteFood">Favorite Food</label>
-        <input type="text" class="form-control" name="favoriteFood" placeholder="Favorite Food">
-      </div>
+        <br>
 
-      <br>
+        <div class="form-group">
+          <label for="favoriteColor">Favorite color:</label>
+          <select class="form-control" default=" " name="favoriteColor">
+            <option value="" disabled selected>Select your color</option>
+            {{#if isRed}}
+              <option selected='selected' value="red">Red</option>
+            {{else}}
+              <option value="red">Red</option>
+            {{/if}}
 
-      <div class="form-group">
-        <label for="favoriteColor">Favorite color:</label>
-        <select class="form-control" name="favoriteColor">
-          <option>Red</option>
-          <option>Blue</option>
-          <option>Yellow</option>
-          <option>Green</option>
-        </select>
-      </div>
+            {{#if isBlue}}
+              <option selected='selected' value="blue">Blue</option>
+            {{else}}
+              <option value="blue">Blue</option>
+            {{/if}}
 
-      <br>
+            {{#if isYellow}}
+              <option selected='selected' value="yellow">Yellow</option>
 
-      <div>
-        <label for="insanityLevel">Insanity Level: (currently at {{insanityLevel}})</label>
-        <input type="range" name="insanityLevel" id="insanitySlider" min="0" max="666" value="{{insanityLevel}}">
-        <p>Current value: <span id="insanityLabel">xxxx</span></p>
-      </div>
+            {{else}}
+              <option value="yellow">Yellow</option>
+            {{/if}}
 
-      <br>
+            {{#if isGreen}}
+              <option selected='selected' value="green">Green</option>
+            {{else}}
+              <option value="green">Green</option>
+            {{/if}}
+          </select>
+        </div>
 
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+        <br>
+
+        <div>
+          <label for="insanityLevel">Insanity Level: (currently at {{insanityLevel}})</label>
+          <input type="range" name="insanityLevel" id="insanitySlider" min="0" max="666" value="{{insanityLevel}}">
+          <p>Current value: <span id="insanityLabel">xxxx</span></p>
+        </div>
+
+        <br> --}}
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+    <div class="{{favoriteColor}}">
+
+
 
     <br>
 
@@ -134,7 +171,7 @@
       <h4>Current Position: <span>{{#if isGood}} Farmer {{else}} Hedge Fund Investor {{/if}}</span></h4>
 
       <br>
-      
+
       <h4>Previous Positions:</h4>
       <ul>
         {{#if isGood}}
@@ -153,6 +190,7 @@
         </li>
         {{/if}}
       </ul>
+    </div>
     </div>
   </div>
 </div>

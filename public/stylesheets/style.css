@@ -1,12 +1,3 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
-}
-
 
 .good {
   color: #000;
@@ -28,4 +19,21 @@ a {
 
 .very-insane {
   font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+
+.red {
+  background: #D46A6A;
+}
+
+.blue {
+  background: #4F628E;
+}
+
+.green {
+  background: #55AA55;
+}
+
+.yellow{
+  background: #D4CB6A;
 }
