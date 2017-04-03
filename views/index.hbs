@@ -1,10 +1,10 @@
 <div class="row">
-  <div class="col-xs-12">
+  <div class="col-xs-12 text-center">
     <h1>CSS Garden of Good and Evil</h1>
     <p>Choose your destiny, if you dare</p>
   </div>
 </div>
-
+<br>
 <div class="row">
   <div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
     <form action="/update" method="post">
@@ -18,10 +18,16 @@
           Evil
         </label>
       </div>
+
+      <br>
+
       <div>
         <label for="favoriteFood">Favorite Food</label>
         <input type="text" class="form-control" name="favoriteFood" placeholder="Favorite Food">
       </div>
+
+      <br>
+
       <div class="form-group">
         <label for="favoriteColor">Favorite color:</label>
         <select class="form-control" name="favoriteColor">
@@ -31,69 +37,122 @@
           <option>Green</option>
         </select>
       </div>
+
+      <br>
+
       <div>
         <label for="insanityLevel">Insanity Level: (currently at {{insanityLevel}})</label>
         <input type="range" name="insanityLevel" id="insanitySlider" min="0" max="666" value="{{insanityLevel}}">
         <p>Current value: <span id="insanityLabel">xxxx</span></p>
       </div>
+
+      <br>
+
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
-    <div>
-      <ul> Likes
+    <br>
+
+    <div class="likes-and-dislikes">
+      <h4>Likes</h4>
+      <div>
+        <ul>
+          <li>
+            {{favoriteFood}}
+          </li>
+          <li>
+            {{favoriteColor}}
+          </li>
+          {{#if isGood}}
+            <li>
+              Walking grandmothers across the street
+            </li>
+            <li>
+              Random acts of kindness
+            </li>
+            <li>
+              Long walks on the beach
+            </li>
+          {{else}}
+            <li>
+              Pushing grandfathers into the street
+            </li>
+            <li>
+              Random acts of evil
+            </li>
+            <li>
+              Global warming
+            </li>
+          {{/if}}
+        </ul>
+      </div>
+
+      <br>
+
+      <h4>Dislikes</h4>
+      <div>
+        <ul>
+          {{#if isGood}}
+            <li>
+              Pranks / idleness
+            </li>
+            <li>
+              Extremely spicy food
+            </li>
+            <li>
+              Loud music after 11pm
+            </li>
+          {{else}}
+            <li>
+              Nonalcoholic beverages
+            </li>
+            <li>
+              Sending thank you notes
+            </li>
+            <li>
+              Babies
+            </li>
+          {{/if}}
+        </ul>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="biography">
+      <h4>Biography:</h4>
+      {{#if isGood}}
+        <p>As a good person you were probably born and raised in South Detroit, and took the midnight train going anywhere.</p>
+      {{else}}
+        <p>As an evil person you were probably born and raised in Alaska where you made a living stealing the souls of innocent passersby.</p>
+      {{/if}}
+    </div>
+
+    <br>
+
+    <div class="resume">
+      <h4>Current Position: <span>{{#if isGood}} Farmer {{else}} Hedge Fund Investor {{/if}}</span></h4>
+
+      <br>
+      
+      <h4>Previous Positions:</h4>
+      <ul>
+        {{#if isGood}}
         <li>
-          {{favoriteFood}}
+          Schoolteacher
         </li>
         <li>
-          {{favoriteColor}}
+          Fire fighter
         </li>
-        {{#if isGood}}
-          <li>
-            Walking grandmothers across the street
-          </li>
-          <li>
-            Random acts of kindness
-          </li>
-          <li>
-            Long walks on the beach
-          </li>
         {{else}}
-          <li>
-            Pushing grandfathers into the street
-          </li>
-          <li>
-            Random acts of evil
-          </li>
-          <li>
-            Global warming
-          </li>
-        {{/if}}
-      </ul>
-      <ul> Dislikes
-        {{#if isGood}}
-          <li>
-            Pranks / idleness
-          </li>
-          <li>
-            Extremely spicy food
-          </li>
-          <li>
-            Loud music after 11pm
-          </li>
-        {{else}}
-          <li>
-            Nonalcoholic beverages
-          </li>
-          <li>
-            Sending thank you notes
-          </li>
-          <li>
-            Babies
-          </li>
+        <li>
+          Attorney
+        </li>
+        <li>
+          Software Developer
+        </li>
         {{/if}}
       </ul>
     </div>
   </div>
 </div>
-
-

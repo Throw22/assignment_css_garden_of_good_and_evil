@@ -10,7 +10,21 @@
   </head>
   <body>
     <main class="container-fluid {{goodOrEvil}}">
-      {{{body}}}
+      {{#if isALittleInsane}}
+      <div class="little-insane">
+      {{/if}}
+
+      {{#if isMediumInsane}}
+      <div class="medium-insane">
+      {{/if}}
+
+      {{#if isVeryInsane}}
+      <div class="very-insane">
+      {{/if}}
+
+        {{{body}}}
+
+      </div>
     </main>
   </body>
 </html>

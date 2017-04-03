@@ -17,6 +17,9 @@ router.get('/', function(req, res, next) {
     favoriteColor: favoriteColor,
     insanityLevel: insanityLevel,
     isGood: goodOrEvil === 'good',
+    isALittleInsane: insanityLevel <= 223,
+    isMediumInsane: insanityLevel >= 224 && insanityLevel <= 446,
+    isVeryInsane: insanityLevel >= 447
   });
 });
 
@@ -39,4 +42,3 @@ router.post('/update', function(req, res, next) {
 });
 
 module.exports = router;
-
